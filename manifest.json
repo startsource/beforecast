@@ -4,7 +4,7 @@
   "lang": "en",
   "name": "beforecast",
   "short_name": "beforecast",
-  "start_url": "/?utm_source=web_app_manifest",
+  "start_url": ".",
   "orientation": "portrait",
   "icons": [
     {
