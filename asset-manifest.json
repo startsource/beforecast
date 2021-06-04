@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/beforecast/static/js/app.387013a4.chunk.js",
-    "app.js.map": "/beforecast/static/js/app.387013a4.chunk.js.map",
+    "app.js": "/beforecast/static/js/app.caf05ae3.chunk.js",
+    "app.js.map": "/beforecast/static/js/app.caf05ae3.chunk.js.map",
     "runtime~app.js": "/beforecast/static/js/runtime~app.6b5ed87b.js",
     "runtime~app.js.map": "/beforecast/static/js/runtime~app.6b5ed87b.js.map",
     "static/js/2.90fad683.chunk.js": "/beforecast/static/js/2.90fad683.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.6b5ed87b.js",
     "static/js/2.90fad683.chunk.js",
-    "static/js/app.387013a4.chunk.js"
+    "static/js/app.caf05ae3.chunk.js"
   ]
 }
