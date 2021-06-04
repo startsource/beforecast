@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    color: "#2c2c2c",
+    color: "black",
     fontSize: 30,
   },
 });

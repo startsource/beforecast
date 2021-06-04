@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import { Alert } from "react-native";
 import Loading from "./components/Loading";

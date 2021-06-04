@@ -1,6 +1,7 @@
-import moment from "moment";
 import React from "react";
+import moment from "moment";
 import { View, Text, Image, StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 export default function Weather({ hourlyData }) {
   const hourCard = hourlyData.map((obj) => (
@@ -39,32 +40,12 @@ export default function Weather({ hourlyData }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header__title}>⛅beforecast⛅</Text>
       <View style={styles.subcontainer}>
-        <View style={styles.hourCard}>
-          <View style={styles.hourCard__hour}>
-            <Text>time</Text>
-          </View>
-          <View style={styles.hourCard__temp}>
-            <Text>yesterday</Text>
-          </View>
-          <View style={styles.hourCard__diff}>
-            <Text>diff</Text>
-          </View>
-          <View style={styles.hourCard__temp}>
-            <Text>today</Text>
-          </View>
-          <View style={styles.hourCard__diff}>
-            <Text>diff</Text>
-          </View>
-          <View style={styles.hourCard__temp}>
-            <Text>Tomorrow</Text>
-          </View>
-          <View style={styles.hourCard__hour}>
-            <Text>time</Text>
-          </View>
+        <View style={styles.header}>
+          <Text style={styles.header__title}>beforecast°</Text>
         </View>
-        {hourCard}
+        <View style={styles.hourCardContainer}>{hourCard}</View>
+        <StatusBar style="auto" />
       </View>
     </View>
   );
@@ -75,47 +56,61 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ecf0f1",
-  },
-  header__title: {
-    fontSize: 30,
+    backgroundColor: "#F3F2F0",
+    paddingTop: 50,
+    paddingBottom: 30,
+    paddingHorizontal: 50,
   },
   subcontainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 10,
-    height: "70%",
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
-    backgroundColor: "#FFFFFF",
+    borderBottomWidth: 3,
+    borderRightWidth: 3,
+    borderColor: "#EBEAE8",
+  },
+  header: {
+    flexDirection: "row-reverse",
+    backgroundColor: "#654EA5",
+    marginBottom: 1,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+  },
+  header__title: {
+    flex: 1,
+    color: "#FFFFFF",
+    fontSize: 30,
+    fontWeight: "700",
+    marginLeft: 8,
+  },
+  hourCardContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   hourCard: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: 400,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 2,
+    marginVertical: 0.5,
   },
   hourCardNow: {
-    flex: 1,
+    flex: 2,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: 400,
-    borderTopWidth: 10,
-    borderBottomWidth: 10,
-    borderColor: "#ecf0f1",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 2,
+    marginVertical: 0.5,
+    borderTopWidth: 5,
+    borderBottomWidth: 5,
+    borderColor: "#EFEAF7",
   },
   hourCard__hour: {
-    flex: 1,
+    flex: 0.8,
     alignItems: "center",
   },
   hourCard__temp: {
