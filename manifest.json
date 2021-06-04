@@ -4,7 +4,7 @@
   "lang": "en",
   "name": "beforecast",
   "short_name": "beforecast",
-  "start_url": "/",
+  "start_url": ".",
   "orientation": "portrait",
   "icons": [
     {
