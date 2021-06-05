@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/beforecast/static/js/app.e4de5519.chunk.js",
-    "app.js.map": "/beforecast/static/js/app.e4de5519.chunk.js.map",
+    "app.js": "/beforecast/static/js/app.3dbd7845.chunk.js",
+    "app.js.map": "/beforecast/static/js/app.3dbd7845.chunk.js.map",
     "runtime~app.js": "/beforecast/static/js/runtime~app.6b5ed87b.js",
     "runtime~app.js.map": "/beforecast/static/js/runtime~app.6b5ed87b.js.map",
-    "static/js/2.5a8aaf11.chunk.js": "/beforecast/static/js/2.5a8aaf11.chunk.js",
-    "static/js/2.5a8aaf11.chunk.js.map": "/beforecast/static/js/2.5a8aaf11.chunk.js.map",
+    "static/js/2.2e81582c.chunk.js": "/beforecast/static/js/2.2e81582c.chunk.js",
+    "static/js/2.2e81582c.chunk.js.map": "/beforecast/static/js/2.2e81582c.chunk.js.map",
     "favicon-16.png": "/beforecast/favicon-16.png",
     "favicon-32.png": "/beforecast/favicon-32.png",
     "favicon.ico": "/beforecast/favicon.ico",
     "index.html": "/beforecast/index.html",
     "manifest.json": "/beforecast/manifest.json",
     "serve.json": "/beforecast/serve.json",
-    "static/js/2.5a8aaf11.chunk.js.LICENSE.txt": "/beforecast/static/js/2.5a8aaf11.chunk.js.LICENSE.txt"
+    "static/js/2.2e81582c.chunk.js.LICENSE.txt": "/beforecast/static/js/2.2e81582c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.6b5ed87b.js",
-    "static/js/2.5a8aaf11.chunk.js",
-    "static/js/app.e4de5519.chunk.js"
+    "static/js/2.2e81582c.chunk.js",
+    "static/js/app.3dbd7845.chunk.js"
   ]
 }
