@@ -6,7 +6,7 @@ import * as Location from "expo-location";
 import axios from "axios";
 import moment from "moment";
 
-const API_KEY = "0aedc667cde644b3b7042416212705";
+const API_KEY = "1cd1743d496348cabfe52848210506";
 
 export default class extends React.Component {
   state = {

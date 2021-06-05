@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import { View, Text, Image, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
 
 export default function Weather({ hourlyData }) {
   const hourCard = hourlyData.map((obj) => (
@@ -45,7 +44,6 @@ export default function Weather({ hourlyData }) {
           <Text style={styles.header__title}>beforecast°</Text>
         </View>
         <View style={styles.hourCardContainer}>{hourCard}</View>
-        <StatusBar style="auto" />
       </View>
     </View>
   );
