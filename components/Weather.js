@@ -42,6 +42,7 @@ export default function Weather({ hourlyData }) {
       <View style={styles.subcontainer}>
         <View style={styles.header}>
           <Text style={styles.header__title}>beforecast°</Text>
+          <Text style={styles.header__version}>v1.0.5 </Text>
         </View>
         <View style={styles.hourCardContainer}>{hourCard}</View>
       </View>
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     borderColor: "#EBEAE8",
   },
   header: {
-    flexDirection: "row-reverse",
+    flexDirection: "row",
     width: 300,
     backgroundColor: "#654EA5",
     marginBottom: 1,
@@ -80,6 +81,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "700",
     marginLeft: 8,
+  },
+  header__version: {
+    color: "#FFFFFF",
+    fontSize: 1,
   },
   hourCardContainer: {
     flex: 1,
