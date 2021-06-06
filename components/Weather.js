@@ -11,28 +11,32 @@ export default function Weather({ hourlyData }) {
       key={obj.index}
     >
       <View style={styles.hourCard__hour}>
-        <Text>{obj.index.toString().padStart(2, "0")}</Text>
+        <Text style={styles.hourCard__hour__text}>
+          {obj.index.toString().padStart(2, "0")}
+        </Text>
       </View>
       <View style={styles.hourCard__temp}>
         <Image style={styles.hourCard__icon} source={{ uri: obj.tempYIcon }} />
-        <Text>{obj.tempY}°</Text>
+        <Text style={styles.hourCard__temp__text}>{obj.tempY}°</Text>
       </View>
       <View style={styles.hourCard__diff}>
-        <Text>{obj.diffYT}</Text>
+        <Text style={styles.hourCard__diff__text}>{obj.diffYT}</Text>
       </View>
       <View style={styles.hourCard__temp}>
         <Image style={styles.hourCard__icon} source={{ uri: obj.tempCIcon }} />
-        <Text>{obj.tempC}°</Text>
+        <Text style={styles.hourCard__temp__text}>{obj.tempC}°</Text>
       </View>
       <View style={styles.hourCard__diff}>
-        <Text>{obj.diffTT}</Text>
+        <Text style={styles.hourCard__diff__text}>{obj.diffTT}</Text>
       </View>
       <View style={styles.hourCard__temp}>
         <Image style={styles.hourCard__icon} source={{ uri: obj.tempTIcon }} />
-        <Text>{obj.tempT}°</Text>
+        <Text style={styles.hourCard__temp__text}>{obj.tempT}°</Text>
       </View>
       <View style={styles.hourCard__hour}>
-        <Text>{obj.index.toString().padStart(2, "0")}</Text>
+        <Text style={styles.hourCard__hour__text}>
+          {obj.index.toString().padStart(2, "0")}
+        </Text>
       </View>
     </View>
   ));
@@ -42,7 +46,7 @@ export default function Weather({ hourlyData }) {
       <View style={styles.subcontainer}>
         <View style={styles.header}>
           <Text style={styles.header__title}>beforecast°</Text>
-          <Text style={styles.header__version}>v1.0.5 </Text>
+          <Text style={styles.header__version}>v1.0.6 </Text>
         </View>
         <View style={styles.hourCardContainer}>{hourCard}</View>
       </View>
@@ -63,8 +67,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    borderBottomWidth: 3,
-    borderRightWidth: 3,
+    borderRadius: 5,
+    borderBottomWidth: 2,
+    borderRightWidth: 2,
     borderColor: "#EBEAE8",
   },
   header: {
@@ -84,7 +89,8 @@ const styles = StyleSheet.create({
   },
   header__version: {
     color: "#FFFFFF",
-    fontSize: 1,
+    fontSize: 7,
+    fontWeight: "300",
   },
   hourCardContainer: {
     flex: 1,
@@ -102,12 +108,12 @@ const styles = StyleSheet.create({
     marginVertical: 0.5,
   },
   hourCardNow: {
-    flex: 2,
+    flex: 1.5,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     width: 300,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#EFEAF7",
     borderRadius: 2,
     marginVertical: 0.5,
     borderTopWidth: 5,
@@ -118,15 +124,29 @@ const styles = StyleSheet.create({
     flex: 0.8,
     alignItems: "center",
   },
+  hourCard__hour__text: {
+    color: "#c3b5dc",
+    fontWeight: "300",
+  },
   hourCard__temp: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
+  hourCard__temp__text: {
+    color: "#737373",
+    fontWeight: "300",
+    fontSize: 16,
+  },
   hourCard__diff: {
     flex: 1,
     alignItems: "center",
+  },
+  hourCard__diff__text: {
+    color: "#737373",
+    fontWeight: "300",
+    fontStyle: "italic",
   },
   hourCard__icon: {
     width: 20,

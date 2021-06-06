@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Loading() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Getting the weather info</Text>
+      <Text style={styles.text}>Getting Weather Data</Text>
     </View>
   );
 }
@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    color: "black",
-    fontSize: 30,
+    color: "#654EA5",
+    fontSize: 25,
+    fontWeight: "300",
   },
 });
