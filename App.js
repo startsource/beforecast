@@ -20,26 +20,14 @@ export default class extends React.Component {
         .format("YYYY-MM-DD")}`
     );
 
-    console.log(
-      weatherY.data.forecast.forecastday[0].hour.map((obj) => obj.temp_c)
-    );
-
     const weatherC = await axios.get(
       `https://api.weatherapi.com/v1/history.json?key=${API_KEY}&q=${latitude},${longitude}&dt=${moment().format(
         "YYYY-MM-DD"
       )}`
     );
 
-    console.log(
-      weatherC.data.forecast.forecastday[0].hour.map((obj) => obj.temp_c)
-    );
-
     const weatherT = await axios.get(
       `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2&aqi=no&alerts=no`
-    );
-
-    console.log(
-      weatherT.data.forecast.forecastday[1].hour.map((obj) => obj.temp_c)
     );
 
     const hourlyY = weatherY.data.forecast.forecastday[0].hour.map((obj) => {
@@ -81,9 +69,14 @@ export default class extends React.Component {
 
     console.log(hourlyData);
 
+    const location = `${weatherY.data.location.name} (${latitude},${longitude})`;
+
+    console.log(location);
+
     this.setState({
       isLoading: false,
       hourlyData,
+      location,
     });
   };
 
@@ -104,7 +97,11 @@ export default class extends React.Component {
   }
 
   render() {
-    const { isLoading, hourlyData } = this.state;
-    return isLoading ? <Loading /> : <Weather hourlyData={hourlyData} />;
+    const { isLoading, hourlyData, location } = this.state;
+    return isLoading ? (
+      <Loading />
+    ) : (
+      <Weather hourlyData={hourlyData} location={location} />
+    );
   }
 }

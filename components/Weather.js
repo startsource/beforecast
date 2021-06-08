@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import { View, Text, Image, StyleSheet } from "react-native";
 
-export default function Weather({ hourlyData }) {
+export default function Weather({ hourlyData, location }) {
   const hourCard = hourlyData.map((obj) => (
     <View
       style={
@@ -46,9 +46,12 @@ export default function Weather({ hourlyData }) {
       <View style={styles.subcontainer}>
         <View style={styles.header}>
           <Text style={styles.header__title}>beforecast°</Text>
-          <Text style={styles.header__version}>v1.0.6 </Text>
+          <Text style={styles.header__version}>v1.0.7 </Text>
         </View>
         <View style={styles.hourCardContainer}>{hourCard}</View>
+      </View>
+      <View>
+        <Text style={styles.footer__location}>{location}</Text>
       </View>
     </View>
   );
@@ -151,5 +154,10 @@ const styles = StyleSheet.create({
   hourCard__icon: {
     width: 20,
     height: 20,
+  },
+  footer__location: {
+    fontSize: 12,
+    color: "#737373",
+    fontWeight: "300",
   },
 });
